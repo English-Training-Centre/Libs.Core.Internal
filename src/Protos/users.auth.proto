@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "Libs.Core.Internal.Protos.UserService";
+
+package users.auth;
+
+service UsersAuthGrpc {
+    rpc UserAuth(GrpcUserAuthRequest) returns (GrpcUserAuthResponse);
+    rpc GetUserAuthById(GrpcUserAuthIdRequest) returns (GrpcUserAuthResponse);
+}
+
+message GrpcUserAuthResponse {
+    bool isSuccess = 1;
+    optional string userId = 2;
+    optional string fullName = 3;
+    optional string username = 4;
+    optional string role = 5;
+}
+
+message GrpcUserAuthRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message GrpcUserAuthIdRequest {
+    string userId = 1;
+}

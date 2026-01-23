@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+option csharp_namespace = "Libs.Core.Internal.Protos.UserService";
+
+package users;
+
+service UsersGrpc {    
+    rpc Create(GrpcUserCreateRequest) returns (GrpcUserCreatedResponse);
+    rpc GetAllByIds(GrpcUserByIdsRequest) returns (GrpcListUserGetAllResponse);
+    rpc Update(GrpcUserUpdateRequest) returns (GrpcUserResponseDTO);
+    rpc Delete(GrpcUserDeleteRequest) returns (GrpcUserResponseDTO);
+}
+
+message GrpcUserCreatedResponse {
+    bool isSuccess = 1;
+    string message = 2;
+    optional string userId = 3;
+    optional string username = 4;
+    optional string password = 5;
+}
+
+message GrpcListUserGetAllResponse {
+    repeated GrpcUserGetAllResponse users = 1;
+}
+
+message GrpcUserGetAllResponse {
+    string id = 1;
+    string fullName = 2;
+    string username = 3;
+    optional string email = 4;
+    string phoneNumber = 5;
+    string role = 6;
+    optional string imageUrl = 7;
+    bool isActive = 8;
+}
+
+message GrpcUserResponseDTO {
+    bool isSuccess = 1;
+    string message = 2;
+}
+
+message GrpcUserCreateRequest {
+    string fullName = 1;    
+    string phoneNumber = 2;
+    optional string email = 3;
+    string roleId = 4;
+}
+
+message GrpcUserByIdsRequest {
+  repeated string ids = 1;
+}
+
+message GrpcUserUpdateRequest {
+    string id = 1;
+    string fullName = 2;    
+    string phoneNumber = 3;
+    optional string email = 4;
+    string roleId = 5;
+}
+
+message GrpcUserDeleteRequest {
+    string id = 1;
+}
