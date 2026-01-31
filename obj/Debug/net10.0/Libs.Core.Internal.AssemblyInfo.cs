@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Libs.Core.Internal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+838601f2009fb2379cf283e53336575a45114007")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd6ab9691120dd59b959921eaa8145912af69f59")]
 [assembly: System.Reflection.AssemblyProductAttribute("Libs.Core.Internal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Libs.Core.Internal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

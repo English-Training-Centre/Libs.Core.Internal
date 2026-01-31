@@ -5,10 +5,10 @@ option csharp_namespace = "Libs.Core.Internal.Protos.SettingService";
 package settings.flyer;
 import "google/protobuf/empty.proto"; 
 
-service SettingGrpc {    
+service SettingFlyerIdGrpc {    
     rpc GetFlyerId(google.protobuf.Empty) returns (GrpcSettingsFlyerIdResponse);
 }
 
 message GrpcSettingsFlyerIdResponse {
-    string id = 1;
+    optional string id = 1;
 }

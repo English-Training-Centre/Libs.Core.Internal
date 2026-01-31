@@ -25,16 +25,16 @@ namespace Libs.Core.Internal.Protos.SettingService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9zcmMvUHJvdG9zL3NldHRpbmdzLmZseWVyLnByb3RvEg5zZXR0aW5ncy5m",
-            "bHllchobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIikKG0dycGNTZXR0",
-            "aW5nc0ZseWVySWRSZXNwb25zZRIKCgJpZBgBIAEoCTJgCgtTZXR0aW5nR3Jw",
-            "YxJRCgpHZXRGbHllcklkEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gisuc2V0",
-            "dGluZ3MuZmx5ZXIuR3JwY1NldHRpbmdzRmx5ZXJJZFJlc3BvbnNlQiuqAihM",
-            "aWJzLkNvcmUuSW50ZXJuYWwuUHJvdG9zLlNldHRpbmdTZXJ2aWNlYgZwcm90",
-            "bzM="));
+            "bHllchobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIjUKG0dycGNTZXR0",
+            "aW5nc0ZseWVySWRSZXNwb25zZRIPCgJpZBgBIAEoCUgAiAEBQgUKA19pZDJn",
+            "ChJTZXR0aW5nRmx5ZXJJZEdycGMSUQoKR2V0Rmx5ZXJJZBIWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRorLnNldHRpbmdzLmZseWVyLkdycGNTZXR0aW5nc0Zs",
+            "eWVySWRSZXNwb25zZUIrqgIoTGlicy5Db3JlLkludGVybmFsLlByb3Rvcy5T",
+            "ZXR0aW5nU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Libs.Core.Internal.Protos.SettingService.GrpcSettingsFlyerIdResponse), global::Libs.Core.Internal.Protos.SettingService.GrpcSettingsFlyerIdResponse.Parser, new[]{ "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Libs.Core.Internal.Protos.SettingService.GrpcSettingsFlyerIdResponse), global::Libs.Core.Internal.Protos.SettingService.GrpcSettingsFlyerIdResponse.Parser, new[]{ "Id" }, new[]{ "Id" }, null, null, null)
           }));
     }
     #endregion
@@ -88,14 +88,28 @@ namespace Libs.Core.Internal.Protos.SettingService {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private string id_ = "";
+    private readonly static string IdDefaultValue = "";
+
+    private string id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
-      get { return id_; }
+      get { return id_ ?? IdDefaultValue; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasId {
+      get { return id_ != null; }
+    }
+    /// <summary>Clears the value of the "id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearId() {
+      id_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,7 +135,7 @@ namespace Libs.Core.Internal.Protos.SettingService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (HasId) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,7 +154,7 @@ namespace Libs.Core.Internal.Protos.SettingService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id.Length != 0) {
+      if (HasId) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
@@ -154,7 +168,7 @@ namespace Libs.Core.Internal.Protos.SettingService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id.Length != 0) {
+      if (HasId) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
@@ -168,7 +182,7 @@ namespace Libs.Core.Internal.Protos.SettingService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
+      if (HasId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (_unknownFields != null) {
@@ -183,7 +197,7 @@ namespace Libs.Core.Internal.Protos.SettingService {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
+      if (other.HasId) {
         Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

@@ -8,9 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Libs.Core.Internal.Protos.SettingService {
-  public static partial class SettingGrpc
+  public static partial class SettingFlyerIdGrpc
   {
-    static readonly string __ServiceName = "settings.flyer.SettingGrpc";
+    static readonly string __ServiceName = "settings.flyer.SettingFlyerIdGrpc";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -64,9 +64,9 @@ namespace Libs.Core.Internal.Protos.SettingService {
       get { return global::Libs.Core.Internal.Protos.SettingService.SettingsFlyerReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of SettingGrpc</summary>
-    [grpc::BindServiceMethod(typeof(SettingGrpc), "BindService")]
-    public abstract partial class SettingGrpcBase
+    /// <summary>Base class for server-side implementations of SettingFlyerIdGrpc</summary>
+    [grpc::BindServiceMethod(typeof(SettingFlyerIdGrpc), "BindService")]
+    public abstract partial class SettingFlyerIdGrpcBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Libs.Core.Internal.Protos.SettingService.GrpcSettingsFlyerIdResponse> GetFlyerId(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
@@ -76,30 +76,30 @@ namespace Libs.Core.Internal.Protos.SettingService {
 
     }
 
-    /// <summary>Client for SettingGrpc</summary>
-    public partial class SettingGrpcClient : grpc::ClientBase<SettingGrpcClient>
+    /// <summary>Client for SettingFlyerIdGrpc</summary>
+    public partial class SettingFlyerIdGrpcClient : grpc::ClientBase<SettingFlyerIdGrpcClient>
     {
-      /// <summary>Creates a new client for SettingGrpc</summary>
+      /// <summary>Creates a new client for SettingFlyerIdGrpc</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public SettingGrpcClient(grpc::ChannelBase channel) : base(channel)
+      public SettingFlyerIdGrpcClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for SettingGrpc that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for SettingFlyerIdGrpc that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public SettingGrpcClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public SettingFlyerIdGrpcClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected SettingGrpcClient() : base()
+      protected SettingFlyerIdGrpcClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected SettingGrpcClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected SettingFlyerIdGrpcClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -125,16 +125,16 @@ namespace Libs.Core.Internal.Protos.SettingService {
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected override SettingGrpcClient NewInstance(ClientBaseConfiguration configuration)
+      protected override SettingFlyerIdGrpcClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new SettingGrpcClient(configuration);
+        return new SettingFlyerIdGrpcClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(SettingGrpcBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(SettingFlyerIdGrpcBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetFlyerId, serviceImpl.GetFlyerId).Build();
@@ -145,7 +145,7 @@ namespace Libs.Core.Internal.Protos.SettingService {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, SettingGrpcBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SettingFlyerIdGrpcBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetFlyerId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Libs.Core.Internal.Protos.SettingService.GrpcSettingsFlyerIdResponse>(serviceImpl.GetFlyerId));
     }
